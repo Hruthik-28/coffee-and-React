@@ -6,7 +6,16 @@ function App() {
   let [counter, setCounter] = useState(0)
 
   const addValue = () =>{
-    setCounter(counter+1)
+    setCounter(counter + 1)
+    setCounter(counter + 1)
+    setCounter(counter + 1)
+    setCounter(counter + 1)
+    setCounter(counter + 1)
+    setCounter(counter + 1)
+    // setCounter(prevCounter => prevCounter + 1)
+    // setCounter(prevCounter => prevCounter + 1)
+    // setCounter(prevCounter => prevCounter + 1)
+    // setCounter(prevCounter => prevCounter + 1)
     if (counter >= 20) {
       counter = 20;
       setCounter(counter)
