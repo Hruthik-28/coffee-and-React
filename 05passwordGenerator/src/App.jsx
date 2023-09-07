@@ -15,7 +15,7 @@ function App() {
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 
     if (numberAllowed) str += "0123456789"
-    if (charAllowed) str += "!@#$%^&*()_+~{}-"
+    if (charAllowed) str += "!@#$%^&*()_+~{}-|/<>,.`"
 
     for (let i = 0; i <= length; i++) {
       let char = Math.floor(Math.random() * str.length + 1)
@@ -39,7 +39,7 @@ function App() {
 
   return (
     <>
-      <div className='w-full max-w-md mx-auto shadow-md rounded-lg p-3 my-8 text-white bg-gray-700'>
+      <div className='w-full max-w-md mx-auto shadow-md rounded-lg p-3 my-40 text-white bg-gray-700'>
         <h1 className='text-center text-2xl mb-5 my-3'>Password Generator</h1>
         <div className='flex rounded-lg overflow-hidden mb-4 gap-2'>
           <input 
@@ -78,7 +78,7 @@ function App() {
               type="checkbox"
               defaultChecked = {charAllowed}
               id='charInput'
-              onChange={() => setNumberAllowed((prev) => !prev)}
+              onChange={() => setCharAllowed((prev) => !prev)}
             />
             <label >characters</label>
           </div>
