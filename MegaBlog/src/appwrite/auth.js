@@ -1,5 +1,4 @@
-import conf from '../config/config'
-
+import conf from '../conf/conf'
 import { Client, Account, ID } from "appwrite";
 
 export class AuthService {
@@ -24,7 +23,7 @@ export class AuthService {
                 return userAccount
             }
         } catch (error) {
-            throw error
+            console.log('Appwrite service :: createAccount :: error', error)        
         }
     }
 
@@ -32,7 +31,7 @@ export class AuthService {
         try {
             return await this.account.createEmailSession(email, password)
         } catch (error) {
-            throw error
+            console.log('Appwrite service :: login :: error', error)        
         }
     }
 
