@@ -1,7 +1,7 @@
 import React from 'react'
 import {Container, Logo, LogoutBtn} from '../index'
-import { Link, Navigate } from 'react-router-dom'
-import { UseSelector, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
 function Header() {
@@ -53,7 +53,7 @@ function Header() {
                                 onClick={() => navigate(item.slug)}
                                 className='inline-block px-6 py-2 duration-200 hover:bg-blue-100 rounded-full'
                                 >
-                                    {item.name}
+                                {item.name}
                                 </button>
                             </li>
                         ) : null
